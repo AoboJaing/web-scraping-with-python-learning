@@ -45,3 +45,5 @@ print download('https://www.google.co.jp/', proxy='127.0.0.1:1080')
 # charset = chardet.detect(html)['encoding']
 #
 # print html.decode(charset).encode('GB18030')
+
+
