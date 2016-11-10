@@ -32,4 +32,16 @@ def download(url, user_agent='wswp', proxy=None, num_retries=2):
 
 
 
-print download('http://write.blog.csdn.net/mdeditor')
+print download('https://www.google.co.jp/', proxy='127.0.0.1:1080')
+
+#------等价于-------#
+
+# import urllib2
+# import chardet
+#
+# proxy = urllib2.ProxyHandler({'https': '127.0.0.1:1080'})
+# opener = urllib2.build_opener(proxy)
+# html = opener.open('https://www.google.co.jp/').read()
+# charset = chardet.detect(html)['encoding']
+#
+# print html.decode(charset).encode('GB18030')
